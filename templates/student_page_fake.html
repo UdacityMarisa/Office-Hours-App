@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    
+  <!--===============Head===============-->
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--<link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Udacity Office Hours App</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+
+  </head>
+
+  <!--===============Body===============-->
+  <body>
+    <div class="container-fluid">
+
+      <!--Nav Bar 
+     Office Hours Link: https://docs.google.com/document/d/1VvDCEe4kfzsQ7FWLi6SvlyPPb98XuCJkJxlAhTWlad4/pub?embedded=true--> 
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="https://docs.google.com/document/d/1VvDCEe4kfzsQ7FWLi6SvlyPPb98XuCJkJxlAhTWlad4/pub?embedded=true">UDACITY OFFICE HOURS APP</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <!-- Question Panel and Past/Submit Panel-->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+          <!--Question Panel-->
+          <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left">Question List</h3>
+
+                <!--Modal Trigger-->
+              <div class="pull-right">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#submitQModal">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>  New
+                </button>
+              </div>
+
+              <!--Motal Activated; Start of Modal-->
+              <div class="modal fade" id="submitQModal" tabindex="-1" role="dialog" aria-labelledby="submitQModalLabel">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title" id="submitQModalLabel">Submit a Question</h4>
+                    </div>
+                    <div class="modal-body">
+                      <!--INSERT QUESTION SUBMISSION FORM
+                      Items: name, email, nanodegree, project, description
+                      -->
+
+                      <!--Name-->
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon1">Name:</span>
+                        <input type="text" class="form-control" name="name" placeholder="Username/Name" aria-describedby="sizing-addon1">
+                      </div>
+                      <br>
+                      <!--Email-->
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon1">Email:</span>
+                        <input type="text" class="form-control" name="email" placeholder="Email" aria-describedby="sizing-addon1">
+                      </div>
+                      <br>
+                      <!--Category-->
+                      <select class="nanodegree" id="select_1" name="nanodegree">
+                        <option selected="selected" value=""> Choose Nanodegree </option>
+                        <option value="Android"> Android </option>
+                        <option value="Data Analyst"> Data Analyst </option>
+                        <option value="Front-End"> Front-End </option>
+                        <option value="Full-Stack"> Full-Stack </option>
+                        <option value="Intro to Programming"> Intro to Programming</option>
+                        <option value="iOS"> iOS </option>
+                      </select>
+
+                      <select class="project" id="select_2" name="project">
+                        <option selected="selected" value=""> Choose Project </option>
+                      </select>
+                      <!--Question Title-->
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon1">Title:</span>
+                        <input type="text" class="form-control" name="title" placeholder="Question Title" aria-describedby="sizing-addon1">
+                      </div>
+                      <br>
+                      <!--Text/Link-->
+                      <div class="input-group input-group-sm">
+                        <span class="input-group-addon" id="sizing-addon1">Link:</span>
+                        <input type="text" class="form-control" name="description" placeholder="Link/Description" aria-describedby="sizing-addon1">
+                      </div>
+                      <br>
+
+
+
+
+                      <!--End of Question Submission Form-->
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true">
+                        </span>
+                      </button>
+                      
+                      <button type="button" class="btn btn-success">Submit</button>
+                      <!--TODO backend for submitting question-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End of Modal-->
+
+            </div>
+            <div class="panel-body">
+              <!--Question Panel Content-->
+              <ul class="list-group">
+
+              <!--TODO Fill out this content with objects-->
+              <!--sample data start-->
+
+ <!--Admin Curr Q-->
+                <div class="list-group-item">
+                  <h4 class="list-group-item-heading" name=TODO>
+                      <!--TODO add response for clicking upvote button in place of "#"-->
+                      <span>
+                        <button type="button" class="btn btn-warning btn-sm btn-group">
+                          <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>5
+                        </button> 
+                        <span name="q_title">Help Implementing Page Viewer</span>
+                      </span>
+                      <span class="custom-category">
+                        <button type="button" class="btn btn-success btn-sm btn-group">
+                          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P0
+                        </button> 
+                      </span>
+                  </h4>
+                  <span class="list-group-item-text">
+                    <b>Name: </b>
+                    <span name="q_name" value="q_name_value">someesh_jha</span>
+                  </span>
+                  <br>
+                  <span class="list-group-item-text">
+                    <b>Description: </b>
+                    <span name="q_description" value="q_description_value"> https://discussions.udacity.com/t/can-someone-help-me-out-with-implementing-page-viewer/28076 </span>
+                  </span>
+                </div>
+                <!--///////////////////////////////////////////////////////-->
+                <div class="list-group-item">
+                  <h4 class="list-group-item-heading" name=TODO>
+                      <!--TODO add response for clicking upvote button in place of "#"-->
+                      <span>
+                        <button type="button" class="btn btn-warning btn-sm btn-group">
+                          <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>3
+                        </button> 
+                        <span name="q_title">Background of TextView Not Moving</span>
+                      </span>
+                      <span class="custom-category">
+                        <button type="button" class="btn btn-success btn-sm btn-group">
+                          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P1
+                        </button> 
+                      </span>
+                  </h4>
+                  <span class="list-group-item-text">
+                    <b>Name: </b>
+                    <span name="q_name" value="q_name_value">claudio_23214</span>
+                  </span>
+                  <br>
+                  <span class="list-group-item-text">
+                    <b>Description: </b>
+                    <span name="q_description" value="q_description_value"> https://discussions.udacity.com/t/27328</span>
+                  </span>
+                </div>
+                <!--///////////////////////////////////////////////////////-->
+                <div class="list-group-item">
+                  <h4 class="list-group-item-heading" name=TODO>
+                      <!--TODO add response for clicking upvote button in place of "#"-->
+                      <span>
+                        <button type="button" class="btn btn-warning btn-sm btn-group">
+                          <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>8
+                        </button> 
+                        <span name="q_title">Spacing Troubles</span>
+                      </span>
+                      <span class="custom-category">
+                        <button type="button" class="btn btn-success btn-sm btn-group">
+                          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P1
+                        </button> 
+                      </span>
+                  </h4>
+                  <span class="list-group-item-text">
+                    <b>Name: </b>
+                    <span name="q_name" value="q_name_value">sender_eric</span>
+                  </span>
+                  <br>
+                  <span class="list-group-item-text">
+                    <b>Description: </b>
+                    <span name="q_description" value="q_description_value"> https://discussions.udacity.com/t/i-cant-seem-to-get-rid-of-the-spacing/27983</span>
+                  </span>
+                </div>
+                <!--///////////////////////////////////////////////////////-->
+                <div class="list-group-item">
+                  <h4 class="list-group-item-heading" name=TODO>
+                      <!--TODO add response for clicking upvote button in place of "#"-->
+                      <span>
+                        <button type="button" class="btn btn-warning btn-sm btn-group">
+                          <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>2
+                        </button> 
+                        <span name="q_title">Embed DialogFragment</span>
+                      </span>
+                      <span class="custom-category">
+                        <button type="button" class="btn btn-success btn-sm btn-group">
+                          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P1
+                        </button> 
+                      </span>
+                  </h4>
+                  <span class="list-group-item-text">
+                    <b>Name: </b>
+                    <span name="q_name" value="q_name_value">joeyturczak</span>
+                  </span>
+                  <br>
+                  <span class="list-group-item-text">
+                    <b>Description: </b>
+                    <span name="q_description" value="q_description_value"> https://discussions.udacity.com/t/embed-dialogfragment/28012</span>
+                  </span>
+                </div>
+              <!--sample data end-->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-4">
+          <!--Past and Submit Panel-->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Past Questions</h3>
+            </div>
+            <div class="panel-body">
+              <!--Past Question Panel Content-->
+              <ul class="list-group">
+              <!--sample data start-->
+              <!--TOOD Fill out this content with objects-->
+
+              <div class="list-group-item">
+                  <h4 class="list-group-item-heading" name=TODO>
+                      <!--TODO add response for clicking upvote button in place of "#"-->
+                      <span>
+                        <button type="button" class="btn btn-warning btn-sm btn-group">
+                          <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>#
+                        </button> 
+                        <span class="custom-upvote">______</span>
+                      </span>
+                      <span class="custom-category">
+                        <button type="button" class="btn btn-success btn-sm btn-group">
+                          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P_
+                        </button> 
+                        <button type="button" class="btn btn-primary btn-sm btn-group">
+                          <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                        </button>
+                      </span>
+                  </h4>
+                  <span class="list-group-item-text">
+                    <b>Name: </b>
+                    <span name="q_name" value="q_name_value">-----</span>
+                  </span>
+                  <br>
+                  <span class="list-group-item-text">
+                    <b>Description: </b>
+                    <span name="q_description" value="q_description_value"> ...link or description... </span>
+                  </span>
+                </div>
+
+                <div class="list-group-item">
+                    <h4 class="list-group-item-heading" name=TODO>
+                        <!--TODO add response for clicking upvote button in place of "#"-->
+                        <span>
+                          <button type="button" class="btn btn-warning btn-sm btn-group">
+                            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>#
+                          </button> 
+                          <span class="custom-upvote">______</span>
+                        </span>
+                        <span class="custom-category">
+                          <button type="button" class="btn btn-success btn-sm btn-group">
+                            <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P_
+                          </button> 
+                          <button type="button" class="btn btn-primary btn-sm btn-group">
+                            <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                          </button>
+                        </span>
+                    </h4>
+                    <span class="list-group-item-text">
+                      <b>Name: </b>
+                      <span name="q_name" value="q_name_value">-----</span>
+                    </span>
+                    <br>
+                    <span class="list-group-item-text">
+                      <b>Description: </b>
+                      <span name="q_description" value="q_description_value"> ...link or description... </span>
+                    </span>
+                  </div>
+
+                  <div class="list-group-item">
+                      <h4 class="list-group-item-heading" name=TODO>
+                          <!--TODO add response for clicking upvote button in place of "#"-->
+                          <span>
+                            <button type="button" class="btn btn-warning btn-sm btn-group">
+                              <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>#
+                            </button> 
+                            <span class="custom-upvote">______</span>
+                          </span>
+                          <span class="custom-category">
+                            <button type="button" class="btn btn-success btn-sm btn-group">
+                              <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P_
+                            </button> 
+                            <button type="button" class="btn btn-primary btn-sm btn-group">
+                              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                            </button>
+                          </span>
+                      </h4>
+                      <span class="list-group-item-text">
+                        <b>Name: </b>
+                        <span name="q_name" value="q_name_value">-----</span>
+                      </span>
+                      <br>
+                      <span class="list-group-item-text">
+                        <b>Description: </b>
+                        <span name="q_description" value="q_description_value"> ...link or description... </span>
+                      </span>
+                    </div>
+
+                    <div class="list-group-item">
+                        <h4 class="list-group-item-heading" name=TODO>
+                            <!--TODO add response for clicking upvote button in place of "#"-->
+                            <span>
+                              <button type="button" class="btn btn-warning btn-sm btn-group">
+                                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>#
+                              </button> 
+                              <span class="custom-upvote">______</span>
+                            </span>
+                            <span class="custom-category">
+                              <button type="button" class="btn btn-success btn-sm btn-group">
+                                <span class="glyphicon glyphicon-book" aria-hidden="true"></span>P_
+                              </button> 
+                              <button type="button" class="btn btn-primary btn-sm btn-group">
+                                <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+                              </button>
+                            </span>
+                        </h4>
+                        <span class="list-group-item-text">
+                          <b>Name: </b>
+                          <span name="q_name" value="q_name_value">-----</span>
+                        </span>
+                        <br>
+                        <span class="list-group-item-text">
+                          <b>Description: </b>
+                          <span name="q_description" value="q_description_value"> ...link or description... </span>
+                        </span>
+                      </div>
+
+              <!--sample data end-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/row-->
+
+
+
+
+<!--       <footer>
+        <p>Udacity Office Hours</p>
+      </footer> -->
+
+    </div><!--/.container-fluid-->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <!--Question Submission Modal's responsive dropdowns-->
+    <script type="text/javascript">
+      var and_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0: Personal Portfolio App</option><option value="P1">P1: Popular Movies Part 1</option><option value="P2">P2: Popular Movies Part 2</option><option value="P3">P3: Super Duo!</option><option value="P4">P4: Build It Bigger</option><option value="P5">P5: Make Your App Material</option><option value="P6">P6: Go Ubiquitous</option><option value="P7">P7: Capstone, Stage 1</option><option value="P8">P8: Capstone, Stage 2</option>';
+      var dand_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option>';
+      var fend_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option>';
+      var fsnd_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option>';
+      var ipnd_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option>';
+      var iosnd_projects = '<option selected="selected" value=""> Choose Project </option><option value="P0">P0</option><option value="P1">P1</option><option value="P2">P2</option>';
+      $(document).ready(function(){
+          $("select#select_1").on('change',function(){
+              if($(this).val()=="Android"){
+                  $("select#select_2").html(and_projects);
+              }else if($(this).val()=="Data Analyst"){
+                  $("select#select_2").html(dand_projects);
+              }else if($(this).val()=="Front-End"){
+                  $("select#select_2").html(fend_projects);
+              }else if($(this).val()=="Full-Stack"){
+                  $("select#select_2").html(fsnd_projects);
+              }else if($(this).val()=="Intro to Programming"){
+                  $("select#select_2").html(ipnd_projects);
+              }else if($(this).val()=="iOS"){
+                  $("select#select_2").html(iosnd_projects);
+              }
+          });
+      });
+    </script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+   <!-- <script src="../bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+  </body>
+</html>
+
